@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>外边距-3-空的块级元素</title>
+    <style>
+      .blue, .red-inner {
+        height: 50px;
+        margin: 10px 0;
+      }
+
+      .blue {
+        background: blue;
+      }
+
+      .red-outer {
+        overflow: hidden; /* 添加这一行可以解决块级盒子的外边距折叠的问题 */
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blue"></div>
+    <div class="red-outer">
+      <div class="red-inner">red inner</div>
+    </div>
+  </body>
+</html>
